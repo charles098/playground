@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px 0;
+    box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* shake */
+.box {
+    width: 180px;
+    height: 50px;
+    margin: 50px auto;
+    border-radius: 5px;
+    background: whiteSmoke;
+    box-shadow: 4px -20px 40px 5px rgb(26, 117, 206) inset;
+}
+
+.shake {
+    animation: shake .5s ease;
+}
+
+@keyframes shake {
+    30% {
+        transform: scale(1.1);
+    }
+
+    40%,
+    60% {
+        transform: rotate(-10deg) scale(1.1);
+    }
+
+    50% {
+        transform: rotate(10deg) scale(1.1);
+    }
+
+    70% {
+        transform: rotate(0deg) scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* fade out */
+.contents {
+    margin: 0 auto 50px auto;
+    width: 400px;
+    height: 400px;
+    line-height: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    color: #555;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+}
+
+.content {
+    line-height: 200px;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.first-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s .5s ease;
+}
+
+.second-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s 1.2s ease;
+}
+
+
+/* 이미지 */
+.opacity-image {
+    opacity: 0;
+    margin: 0 auto;
+    display: block;
+}
